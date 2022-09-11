@@ -383,7 +383,7 @@ async def get_shortlink(link):
         https = "https"
         link = link.replace("http", https)
     url = f'https://shorturllink.in/api'
-    params = {'api': 'API_TOKEN',
+    params = {'api': 'SHORTENER_API',
               'url': link,
               }
 
