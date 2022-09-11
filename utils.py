@@ -389,13 +389,13 @@ async def get_shortlink(link):
 
     try:
         async with aiohttp.ClientSession() as session:
-        async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
-            data = await response.json()
-            if data["status"] == "success":
-                return data['shortenedUrl']
-            else:
-                 logger.error(f"Error: {data['message']}")
-                 return f'https://shorturllink.in/api?api={API_TOKEN}&link={link}'
+            async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+                data = await response.json(content_type='text/html')
+                if data["status"] == "success":
+                    return data['shortenedUrl']
+                else:
+                    logger.error(f"Error: {data['message']}")
+                    return f'https://shorturllink.in/api?api={SHORTENER_API}&link={link}'
 
 
     except Exception as e:
