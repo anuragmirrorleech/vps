@@ -459,8 +459,7 @@ def humanbytes(size):
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
 
-def short_url(link):
-    api = '0d5f53c09b7f6cf2a1914ceb49398031b688f88d'
+def get_shortlink(link):
         params = {'api': SHORTENER_API, 'url': link}
         duli= f'https://dulink.in/api'
         get_url = requests.get(duli,params)
