@@ -75,7 +75,7 @@ async def next_page(bot, query):
     btn.insert(0, 
         [
             InlineKeyboardButton('ɢʀᴏᴜᴘ', url='search_zone_support'),
-            InlineKeyboardButton('sʜᴀʀᴇ ᴍᴇ', url="https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Search+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get+a+movie%2C+collection+of+movies+in+most+languages+%E2%80%8B%E2%80%8Bof+the+world..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A+%0D%0A%F0%9F%91%87+Join+Updates+Channel+%0D%0A+%0D%0Ahttps%3A%2F%2Ft.me%2FMovies_Search_Zone"),
+            InlineKeyboardButton('sʜᴀʀᴇ ᴍᴇ', url="https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Search+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+Join%0D%0A+https%3A%2F%2Ft.me%2FSearch_Zone"),
             InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/search_zone')
         ]
     )
@@ -448,7 +448,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         await query.answer("You clicked About Me")
         buttons = [[
-            InlineKeyboardButton('🤖ᴜᴘᴅᴀᴛᴇ🤖', url='https://t.me/GreyMatter_Bots'),
+            InlineKeyboardButton('🤖ᴜᴘᴅᴀᴛᴇ🤖', url='https://t.me/search_zone'),
             InlineKeyboardButton('🌡️ꜱᴛᴀᴛᴜꜱ🌡️', callback_data='stats')
         ], [
             InlineKeyboardButton('👀ᴍᴀɪɴ ᴍᴇɴᴜ👀', callback_data='start'),
@@ -684,7 +684,7 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0, 
         [
             InlineKeyboardButton('ɢʀᴏᴜᴘ', url='https://t.me/search_zone_support'),
-            InlineKeyboardButton('sʜᴀʀᴇ ᴍᴇ', url="https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Movies+Search+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get+a+movie%2C+collection+of+movies+in+most+languages+%E2%80%8B%E2%80%8Bof+the+world..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A+%0D%0A%F0%9F%91%87+Join+Updates+Channel+%0D%0A+%0D%0Ahttps%3A%2F%2Ft.me%2FMovies_Search_Zone"),
+            InlineKeyboardButton('sʜᴀʀᴇ ᴍᴇ', url='https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Search+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+Join%0D%0A+https%3A%2F%2Ft.me%2FSearch_Zone'),
             InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/search_zone')
         ]
     )
