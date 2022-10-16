@@ -459,27 +459,17 @@ def humanbytes(size):
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
 
-async def get_shortlink(link):
-    https = link.split(":")[0]
-    if "http" == https:
-        https = "https"
-        link = link.replace("http", https)
-    url = f'https://du-link.in/api'
-    params = {'api': SHORTENER_API,
-              'url': link,
-              }
-
-    try:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
-                data = await response.json()
-                if data["status"] == "success":
-                    return data['shortenedUrl']
-                else:
-                    logger.error(f"Error: {data['message']}")
-                    return f'https://du-link.in/api?api={SHORTENER_API}&link={link}'
-
-
-    except Exception as e:
-        logger.error(e)
-        return f'https://du-link.in/api?api={SHORTENER_API}&link={link}'
+def short_url(longurl):
+    api = '0d5f53c09b7f6cf2a1914ceb49398031b688f88d'
+        params = {'api': api, 'url': longurl}
+        duli= f'https://dulink.in/api'
+        get_url = requests.get(duli,params)
+        get_url =  get_url.json()['shortenedUrl']
+        domain = 'https://dulink.in/'
+        print(get_url)
+        Final = get_url.split('/')[4]
+        return f'{domain}{Final}'
+            
+    
+    else:
+        return requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={longurl}&format=text').text
