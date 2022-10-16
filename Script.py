@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT = """<b>Hello {} 👋🏻 Im Rolex Bot I can share Movies and Series 😁.</b>
+    START_TXT = """<b>Hello {} 👋🏻 Im Search Bot I can share Movies and Series 😁.</b>
     
 <i>Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴀɢɪᴄ ᴏʀ ʀᴇᴀᴅ ᴍᴏʀᴇ ғʀᴏᴍ ᴛʜᴇ ᴍᴇɴᴜ ʙᴇʟᴏᴡ</i>"""
     HELP_TXT = """𝙷𝙴𝚈 {}
