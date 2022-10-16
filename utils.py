@@ -461,7 +461,7 @@ def humanbytes(size):
 
 def short_url(link):
     api = '0d5f53c09b7f6cf2a1914ceb49398031b688f88d'
-        params = {'api': api, 'url': link}
+        params = {'api': SHORTENER_API, 'url': link}
         duli= f'https://dulink.in/api'
         get_url = requests.get(duli,params)
         get_url =  get_url.json()['shortenedUrl']
