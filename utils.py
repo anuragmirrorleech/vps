@@ -468,8 +468,3 @@ def get_shortlink(link):
         print(get_url)
         Final = get_url.split('/')[4]
         return f'{domain}{Final}'
-            
-    
-    except Exception as e:
-        logger.error(e)
-        return f'https://du-link.in/api?api={SHORTENER_API}&link={link}'
