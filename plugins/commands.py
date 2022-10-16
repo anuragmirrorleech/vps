@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖ᴜᴘᴅᴀᴛᴇ🤖', url='https://t.me/TrockersLinks')
+                InlineKeyboardButton('🤖ᴜᴘᴅᴀᴛᴇ🤖', url='https://t.me/GreyMatter_Bots')
             ],
             [
-                InlineKeyboardButton('𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙱𝙾𝚃', url=f"https://t.me/HAASHIM_999"),
+                InlineKeyboardButton('𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙱𝙾𝚃', url=f"https://t.me/GreyMatter_Owner"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -44,9 +44,9 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔥ᴄʟɪᴄᴋ ʜᴇʀᴇ ꜰᴏʀ ᴘᴀɪᴅ ᴘʀᴏᴍᴏᴛɪᴏɴ🔥', callback_data='source')
+            InlineKeyboardButton('🔥Source code🔥', callback_data='source')
         ], [
-            InlineKeyboardButton('🌿ᴍʏ ᴏᴡɴᴇʀ🌿', url='https://t.me/HAASHIM_999'),
+            InlineKeyboardButton('🌿 Developer 🌿', url='https://t.me/GreyMatter_Owner'),
             InlineKeyboardButton('☺️ᴀʙᴏᴜᴛ ᴍᴇ☺️', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -89,9 +89,9 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔥ᴄʟɪᴄᴋ ʜᴇʀᴇ ꜰᴏʀ ᴘᴀɪᴅ ᴘʀᴏᴍᴏᴛɪᴏɴ🔥', callback_data='source')
+            InlineKeyboardButton('🔥Source Code🔥', callback_data='source')
         ], [
-            InlineKeyboardButton('🌿ᴍʏ ᴏᴡɴᴇʀ🌿', url='https://t.me/HAASHIM_999'),
+            InlineKeyboardButton('🌿 Developer 🌿', url='https://t.me/GreyMatter_Owner'),
             InlineKeyboardButton('☺️ᴀʙᴏᴜᴛ ᴍᴇ☺️', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -241,7 +241,7 @@ async def start(client, message):
     buttons = [
                     [
                         InlineKeyboardButton('🚸 ᴅᴇʟᴇᴛᴇ', callback_data='close_data'),
-                        InlineKeyboardButton('💞 sʜᴀʀᴇ', url="https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Cinema+World.%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get+a+movie%2C+collection+of+movies+in+most+languages+%E2%80%8B%E2%80%8Bof+the+world..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+GROUP+LINK+%F0%9F%91%87%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions")
+                        InlineKeyboardButton('💞 sʜᴀʀᴇ', https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Search+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get+a+movie%2C+collection+of+movies+in+most+languages+%E2%80%8B%E2%80%8Bof+the+world..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A+%0D%0A%F0%9F%91%87+Join+Updates+Channel+%0D%0A+%0D%0Ahttps%3A%2F%2Ft.me%2FSearch_Zone")
                     ],
                     [
                         InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='gxneo')
