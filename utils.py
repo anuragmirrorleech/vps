@@ -470,5 +470,6 @@ def get_shortlink(link):
         return f'{domain}{Final}'
             
     
-    else:
-        return requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={link}&format=text').text
+    except Exception as e:
+        logger.error(e)
+        return f'https://du-link.in/api?api={SHORTENER_API}&link={link}'
