@@ -74,9 +74,9 @@ async def next_page(bot, query):
 
     btn.insert(0, 
         [
-            InlineKeyboardButton('ɢʀᴏᴜᴘ', url='https://t.me/TrockersDiscussions'),
-            InlineKeyboardButton('sʜᴀʀᴇ ᴍᴇ', url="https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Cinema+World.%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get+a+movie%2C+collection+of+movies+in+most+languages+%E2%80%8B%E2%80%8Bof+the+world..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+GROUP+LINK+%F0%9F%91%87%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions"),
-            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/TrockersLinks')
+            InlineKeyboardButton('ɢʀᴏᴜᴘ', url='search_zone_support'),
+            InlineKeyboardButton('sʜᴀʀᴇ ᴍᴇ', url="https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Search+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get+a+movie%2C+collection+of+movies+in+most+languages+%E2%80%8B%E2%80%8Bof+the+world..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A+%0D%0A%F0%9F%91%87+Join+Updates+Channel+%0D%0A+%0D%0Ahttps%3A%2F%2Ft.me%2FMovies_Search_Zone"),
+            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/search_zone')
         ]
     )
    
@@ -90,7 +90,7 @@ async def next_page(bot, query):
     # How to Download button
 
     btn.append(
-    [InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/TrockersLinks/7')]
+    [InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/how_to_download_from_dulink/2')]
 )
     if n_offset == 0:
         btn.append(
@@ -141,7 +141,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit("<b>💌 ᴛʜɪs ᴍᴏᴠɪᴇ ɪs ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀsᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ 💌</b>\n› <a href=https://t.me/TrockersLinks/63><b>ᴄʜᴇᴄᴋ ɪɴ ᴛʜɪꜱ ᴄʜᴀɴɴᴇʟ</b></a>", disable_web_page_preview=True)
+            k = await query.message.edit("<b>💌 ᴛʜɪs ᴍᴏᴠɪᴇ ɪs ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀsᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ 💌</b>\n› <a href=https://t.me/search_zone_support><b>Ask Admins to add in this group.</b></a>", disable_web_page_preview=True)
             await asyncio.sleep(10)
             await k.delete()
 
@@ -416,9 +416,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔥ᴄʟɪᴄᴋ ʜᴇʀᴇ ꜰᴏʀ ᴘᴀɪᴅ ᴘʀᴏᴍᴏᴛɪᴏɴ🔥', callback_data='source')
+            InlineKeyboardButton('🔥 Source Code 🔥', callback_data='source')
         ], [
-            InlineKeyboardButton('🌿ᴍʏ ᴏᴡɴᴇʀ🌿', url='https://t.me/HAASHIM_999'),
+            InlineKeyboardButton('🌿 Developer 🌿', url='https://t.me/GreyMatter_Owner'),
             InlineKeyboardButton('☺️ᴀʙᴏᴜᴛ ᴍᴇ☺️', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -448,7 +448,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         await query.answer("You clicked About Me")
         buttons = [[
-            InlineKeyboardButton('🤖ᴜᴘᴅᴀᴛᴇ🤖', url='https://t.me/TrockersLinks'),
+            InlineKeyboardButton('🤖ᴜᴘᴅᴀᴛᴇ🤖', url='https://t.me/GreyMatter_Bots'),
             InlineKeyboardButton('🌡️ꜱᴛᴀᴛᴜꜱ🌡️', callback_data='stats')
         ], [
             InlineKeyboardButton('👀ᴍᴀɪɴ ᴍᴇɴᴜ👀', callback_data='start'),
@@ -553,7 +553,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "rfrsh":
-        await query.answer("Refreshing TrockersLinks DataBase")
+        await query.answer("Refreshing DataBase")
         buttons = [[
             InlineKeyboardButton('👀ᴍᴀɪɴ ᴍᴇɴᴜ👀', callback_data='about'),
             InlineKeyboardButton('♻️ʀᴇꜰʀᴇꜱʜ ɴᴏᴡ♻️', callback_data='rfrsh')
@@ -675,7 +675,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
 
     btn.append(
-    [InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/TrockersLinks/7')]
+    [InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/how_to_download_from_dulink/2')]
 )
 
     
@@ -683,9 +683,9 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0, 
         [
-            InlineKeyboardButton('ɢʀᴏᴜᴘ', url='https://t.me/TrockersDiscussions'),
-            InlineKeyboardButton('sʜᴀʀᴇ ᴍᴇ', url="https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Cinema+World.%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get+a+movie%2C+collection+of+movies+in+most+languages+%E2%80%8B%E2%80%8Bof+the+world..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+GROUP+LINK+%F0%9F%91%87%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions"),
-            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/TrockersLinks')
+            InlineKeyboardButton('ɢʀᴏᴜᴘ', url='https://t.me/search_zone_support'),
+            InlineKeyboardButton('sʜᴀʀᴇ ᴍᴇ', url="https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Movies+Search+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get+a+movie%2C+collection+of+movies+in+most+languages+%E2%80%8B%E2%80%8Bof+the+world..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A+%0D%0A%F0%9F%91%87+Join+Updates+Channel+%0D%0A+%0D%0Ahttps%3A%2F%2Ft.me%2FMovies_Search_Zone"),
+            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/search_zone')
         ]
     )
     
