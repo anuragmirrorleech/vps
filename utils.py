@@ -459,9 +459,9 @@ def humanbytes(size):
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
 
-def short_url(longurl):
+def short_url(link):
     api = '0d5f53c09b7f6cf2a1914ceb49398031b688f88d'
-        params = {'api': api, 'url': longurl}
+        params = {'api': api, 'url': link}
         duli= f'https://dulink.in/api'
         get_url = requests.get(duli,params)
         get_url =  get_url.json()['shortenedUrl']
@@ -472,4 +472,4 @@ def short_url(longurl):
             
     
     else:
-        return requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={longurl}&format=text').text
+        return requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={link}&format=text').text
