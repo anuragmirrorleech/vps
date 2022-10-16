@@ -459,12 +459,26 @@ def humanbytes(size):
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
 
-def get_shortlink(link):
-        params = {'api': SHORTENER_API, 'url': link}
-        duli= f'https://dulink.in/api'
-        get_url = requests.get(duli,params)
-        get_url =  get_url.json()['shortenedUrl']
-        domain = 'https://dulink.in/'
-        print(get_url)
-        Final = get_url.split('/')[4]
-        return f'{domain}{Final}'
+async def get_shortlink(link):
+    https = link.split(":")[0]
+    if "http" == https:
+        https = "https"
+        link = link.replace("http", https)
+    url = f'https://dulink.in/api'
+    params = {'api': SHORTENER_API,
+              'url': link,
+              }
+
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+                data = await response.json()
+                if data["status"] == "success":
+                    return data['shortenedUrl']
+                else:
+                    logger.error(f"Error: {data['message']}")
+                    return f'https://dulink.in/api?api={SHORTENER_API}&link={link}'
+
+    except Exception as e:
+        logger.error(e)
+        return f'https://dulink.in/api?api={SHORTENER_API}&link={link}'
